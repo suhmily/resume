@@ -1,0 +1,168 @@
+\documentclass[margin,line]{res}
+\usepackage{hyperref}
+%\usepackage{CJK}
+\usepackage[fontset=ubuntu]{ctex}
+\usepackage{marvosym} % For cool symbols.
+%\usepackage[hyperref,UTF8]{ctex}
+\pagestyle{plain} \pagenumbering{Roman}
+\usepackage{enumitem}
+
+\usepackage{fontspec,xunicode,xltxtra}
+\usepackage{xeCJK} 
+\setCJKmainfont[BoldFont={},ItalicFont={SIMKAI.TTF}]
+{SIMSUN.TTC}
+%\setCJKsansfont{SimHei}
+%\setCJKmonofont{[FangSong]}
+
+\setCJKfamilyfont{zhsong}{SIMSUN.TTC}
+\setCJKfamilyfont{zhhei}{SimHei}
+\setCJKfamilyfont{zhkai}{[simkai.ttf]}
+\setCJKfamilyfont{zhfs}{[FangSong]}
+% \setCJKfamilyfont{zhli}{LiSu}
+% \setCJKfamilyfont{zhyou}{YouYuan}
+
+%\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+%\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+%\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+%\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+\setmainfont{Times New Roman}
+%\setCJKmainfont{SimSun} % 设置缺省中文字体
+%\setCJKmonofont{SimHei} % 设置等宽字体
+%\oddsidemargin -.5in
+%\evensidemargin -.5in
+%\textwidth=6.0in
+%\itemsep=0in
+%\parsep=0in
+
+\oddsidemargin 0.1in \evensidemargin 0in \textwidth=4.8in
+\textheight=8.6in
+\itemsep=0in
+\parsep=0in
+
+
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+\begin{document}
+%\begin{CJK*}{GBK}{song}
+\name{\LARGE{SU Zhou (苏舟)} \vspace*{.20in}}
+%\textbf{•}\name{苏舟 \vspace*{.20in}}
+\begin{resume}
+
+
+	\section{\sc 个人信息}
+	\vspace{.05in}
+	\begin{tabular}{@{}p{2.6in}p{3in}}
+		手机: (+86) 159-0127-9099 \
+		 & E-mail:\href{mailto:suhmily@gmail.com}{suhmily\textrm{@}gmail.com} \\
+	\end{tabular}
+
+
+
+	\section{\sc 工作经历}
+	\textbf{快手社区科学部}，算法工程师 \hfill{2021.01 - 至今}\\
+	% \begin{list2}
+	% \item[] 负责同城页直播营收业务算法建设
+	% \item[] 负责内容增长业务及算法建设 
+	% \end{list2}
+	\textbf{腾讯微信推荐产品中心}，应用研究员 \hfill{2017.12 - 2021.01} \\
+	% \begin{list2}
+	% \item[] 负责研发微信看一看中视频推荐以及视频理解中台建设
+	% \item[] 负责研发微信搜一搜中基础相关性算法
+	% \end{list2}
+	\textbf{英特尔研究院}，研究员 \hfill{2015.10 - 2017.12}\\
+	% \begin{list2}
+	% \item[] 负责研发英特尔平台上的深度学习相关算法 
+	% \end{list2}
+
+	\section{\sc 教育经历}
+	\textbf{卡耐基梅隆大学}, 信息科学，硕士 \hfill{2014 - 2015} \\
+	\textbf{清华大学}, 计算机科学与技术， 学士 \hfill{2010 - 2014}
+
+
+	\section{\sc 项目经历}
+	\textbf{快意大语言模型预训练} \hfill{2023}
+	\begin{description}
+		% \item \textbf{责任描述}: 作为预训练主要负责人之一，优化快意大语言模型的模型效果
+		\item \textbf{项目描述}：
+		      \begin{list2}
+			      \item code效果优化：设计实现 code 数据的处理、清洗、组织、采样的方式，提升模型的代码能力。
+			      \item 模型小型化优化：使用模型蒸馏、COT 等方式提升 1.3b 规模模型的推理效果。
+			      \item 构造数据：使用 llm 生成高质量训练数据，包含垂类课程数据、推理过程数据、稀缺知识数据等，提升模型效果。
+		      \end{list2}
+	\end{description}
+
+	\textbf{快意多模态模型} \hfill{2022}
+	\begin{description}
+		% \item \textbf{责任描述}：作为SFT 方向负责人，从 0到 1 搭建快意多模态大模型 SFT框架
+		\item \textbf{项目描述}：
+		      \begin{list2}
+			      \item 数据体系搭建：构建SFT任务体系，包含5 大类、37 项任务，建设完整的数据链路，以及搭建数据可视化平台。
+			      \item 模型结构优化：基于 llava 框架的多模态模型结构，使用 lora finetune 提升快意大语言模型对多模态模型的适配能力。
+		      \end{list2}
+	\end{description}
+
+	\textbf{基于强化学习的冷启动推荐} \hfill{2021}
+	\begin{description}
+		% \item \textbf{责任描述}: 作为项目负责人，从0到1构建冷启动算法业务。
+		\item \textbf{项目描述}：
+		      \begin{list2}
+			      \item 基于强化学习算法，设计搭建内容冷启动视频撬动算法，基于视频的分发速度提升视频未来曝光的长期收益，提升视频成长价值。
+			      \item 将内容冷启动算法应用到推荐系统的内容挖掘、召回、排序等各个模块， 提升视频的冷启动效率，拓宽推荐视频候选的入水口。
+		      \end{list2}
+	\end{description}
+
+	\textbf{Visual knowledge memory netowrk for visual question answering} \hfill{2017}
+	\begin{description}
+		%\item 关键技术：CNN(Resnet-152), LSTM, Knowledge graph, question answering
+		%\item 编程语言：Torch， Python 
+		%\item 开发环境：Linux
+		% \item \textbf{责任描述}：作为主要负责人，设计算法框架， 实现模型代码，参加Visual QA challenge 2017 竞赛， 撰写\emph{CVPR} 2018相关论文
+		\item \textbf{项目描述}：本项目提出了一种针对视觉问答的全新的框架 Visual knowledge memory netowrk (VKMN)，融合了结构注意力模型 (visual structured attention)， 知识库 (knowledge graph) 和键值记忆网络 (key-value memroy network)。 VKMN 模型通过对视觉信息知识库的构建和查找，对视觉问题答案预测进行了信息补充和常识约束，使视觉问答的结果更符合人类的常识，提高答案预测的准确性。本项目参加了由弗吉尼亚理工大学举办的 Visual QA Challenge 2017， 并取得预测准确率的第五名, 相关论文``Learning Visual Knowledge Memory Networks for Visual Question Answering'' 被\emph{CVPR} 2018接收。
+	\end{description}
+
+
+	\section{\sc 论文列表}
+	\begin{enumerate}[leftmargin=*]
+		\item \textbf{Z. Su},  C. Zhu, Y. Dong, D. Cai, Y. Chen and J. Li ``Learning Visual Knowledge Memory Networks for Visual Question Answering,'' accepted by \emph{CVPR} 2018.
+
+		\item Z. Shen, J. Li, \textbf{Z. Su},  M. Li, Y. Chen, Y. Jiang and X. Xue ``Weakly Supervised Dense Video Captioning,'' accepted by \emph{CVPR} 2017.
+
+		\item P. Cui, Z. Wang and \textbf{Z. Su}, ``What Videos Are Similar With You? Learning a Common Attributed Representation for Video Recommendation,'' accepted by \emph{ACM Multimedia}, 2014.
+
+		\item \textbf{Z. Su}，H. Wei and S. Wei, ``Crowd Event Perception Based On Spatio-Temporal Weber Field,'' accepted by \emph{JECE}, 2014.
+
+	\end{enumerate}
+
+	\section{\sc 主要奖项}
+	\begin{list2}
+		\item \textbf{2023洛子峰奖， 快手} \hfill{2023}
+		\\\emph{快手技术项目最高奖，快意大语言模型项目}
+		\item \textbf{年度绩效A， 快手} \hfill{2022}
+		\\\emph{部门最高绩效，在贡献业务结果与模型能力方面有杰出表现。}
+		\item \textbf{优秀员工奖, 微信} \hfill{2018 Q1, 2019 Q2}
+		\\\emph{在完成提交出色业务成果方面有杰出表现。}
+		\item \textbf{Visual Question Answering竞赛, 弗吉尼亚理工大学} \hfill{2017}
+		\\\emph{在图片视觉问答比赛中获得准确率第五名。}
+		\item \textbf{MSR-VTT竞赛, 微软} \hfill{2016}
+		\\\emph{在视频描述自动生成比赛中获得人工评测第四名。}
+		\item \textbf{Deliver Award, 英特尔中国研究中心} \hfill{2016, 2017}
+		\\\emph{在带领团队提交出色的业务成果方面有杰出表现。}
+
+	\end{list2}
+
+\end{resume}
+%\end{CJK*}
+\end{document}
